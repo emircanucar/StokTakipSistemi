@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FirstForm));
             panelTopBar = new Panel();
             btnMin = new Button();
             btnClose = new Button();
@@ -553,10 +554,10 @@
             Controls.Add(panelRight);
             Controls.Add(panelLeft);
             Controls.Add(panelTopBar);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
             MinimumSize = new Size(1024, 576);
             Name = "FirstForm";
-            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Load += FirstForm_Load;
             panelTopBar.ResumeLayout(false);

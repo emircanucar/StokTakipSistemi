@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
             panelTopBar = new Panel();
             btnMin = new Button();
             btnClose = new Button();
@@ -129,6 +130,7 @@
             ControlBox = false;
             Controls.Add(panelRight);
             Controls.Add(panelTopBar);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(400, 250);
             Name = "AboutForm";
             SizeGripStyle = SizeGripStyle.Show;

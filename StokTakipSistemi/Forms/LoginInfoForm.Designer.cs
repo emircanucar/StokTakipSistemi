@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginInfoForm));
             panelTopBar = new Panel();
             btnMin = new Button();
             btnClose = new Button();
@@ -129,6 +130,7 @@
             ControlBox = false;
             Controls.Add(panel1);
             Controls.Add(panelTopBar);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "LoginInfoForm";
             StartPosition = FormStartPosition.CenterScreen;
             panelTopBar.ResumeLayout(false);

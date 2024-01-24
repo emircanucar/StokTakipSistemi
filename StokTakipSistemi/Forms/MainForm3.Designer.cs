@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm3));
             panelTopBar = new Panel();
             btnMin = new Button();
             btnClose = new Button();
@@ -334,10 +335,10 @@
             Controls.Add(panelRight);
             Controls.Add(panelLeft);
             Controls.Add(panelTopBar);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
             MinimumSize = new Size(1024, 600);
             Name = "MainForm3";
-            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Load += MainForm3_Load;
             panelTopBar.ResumeLayout(false);

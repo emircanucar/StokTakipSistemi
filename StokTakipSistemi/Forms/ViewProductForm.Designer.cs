@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewProductForm));
             panelTopBar = new Panel();
             btnMin = new Button();
             btnClose = new Button();
@@ -244,7 +245,7 @@
             panel.Anchor = AnchorStyles.Top;
             panel.Controls.Add(panelForm);
             panel.Controls.Add(pictureBoxProduct);
-            panel.Location = new Point(237, 3);
+            panel.Location = new Point(215, 3);
             panel.Name = "panel";
             panel.Size = new Size(514, 926);
             panel.TabIndex = 15;
@@ -799,6 +800,7 @@
             Controls.Add(panel10);
             Controls.Add(panelContent);
             Controls.Add(panelTopBar);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ViewProductForm";
             StartPosition = FormStartPosition.CenterScreen;
             Load += ViewProductForm_Load;

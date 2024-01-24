@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewUserForm));
             panelTopBar = new Panel();
             btnMin = new Button();
             btnClose = new Button();
@@ -539,6 +540,7 @@
             Controls.Add(panel10);
             Controls.Add(panelContent);
             Controls.Add(panelTopBar);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ViewUserForm";
             Load += ViewUserForm_Load;
             panelTopBar.ResumeLayout(false);
