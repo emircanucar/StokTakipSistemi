@@ -1,8 +1,10 @@
 # StokTakipSistemi
 
-A simple stock tracking application.
+A simple stock tracking application.<br>
 User interface language is Turkish only at the moment.
 
-<div style="width:60px ; height:60px">
-  <img src="/ScreenShots/FirstPage.png" alt="Employee data" title="Employee Data title">
+## Screenshots
+<div style="display:flex;"> 
+  <img src="/ScreenShots/FirstPage.png" alt="First Page" style="width=60%;" >
+  <img src="/ScreenShots/LoginScreen.png" alt="Login Page" style="width=60%;" >
 <div>
