@@ -41,7 +41,6 @@ namespace StokTakipSistemi.Forms
                     product.Brand = dr["Brand"].ToString() ?? "";
                     product.Model = dr["Model"].ToString() ?? "";
                     product.Origin = dr["Origin"].ToString() ?? "";
-                    product.ImageURL = dr["ImageURL"].ToString() ?? "";
                     product.Description = dr["Description"].ToString() ?? "";
 
                 }
@@ -52,7 +51,6 @@ namespace StokTakipSistemi.Forms
                 textBoxProductModel.Text = product.Model;
                 textBoxProductOrigin.Text = product.Origin;
                 textBoxProductDesc.Text = product.Description;
-                pictureBoxProduct.ImageLocation = product.ImageURL;
 
                 cmd2.CommandText = "SELECT * FROM Product_Detail where Product_Id = '" + product.Id + "'";
                 dr2 = cmd2.ExecuteReader();
@@ -123,7 +121,7 @@ namespace StokTakipSistemi.Forms
             con.Open();
 
             SQLiteCommand cmd = new SQLiteCommand(con);
-            cmd.CommandText = $"update Product Set Category='{textBoxProductCategory.Text}', Name='{textBoxProductName.Text}',  Brand='{textBoxProductBrand.Text}',  Model='{textBoxProductModel.Text}',  Origin='{textBoxProductOrigin.Text}',  Description='{textBoxProductDesc.Text}', ImageURL='{pictureBoxProduct.ImageLocation}'  where Id = '" + product.Id + "'";
+            cmd.CommandText = $"update Product Set Category='{textBoxProductCategory.Text}', Name='{textBoxProductName.Text}',  Brand='{textBoxProductBrand.Text}',  Model='{textBoxProductModel.Text}',  Origin='{textBoxProductOrigin.Text}',  Description='{textBoxProductDesc.Text}' where Id = '" + product.Id + "'";
             cmd.ExecuteNonQuery();
 
             SQLiteCommand cmd2 = new SQLiteCommand(con);
@@ -151,33 +149,6 @@ namespace StokTakipSistemi.Forms
             buttonCancel.Enabled = false;
             panelForm.Enabled = false;
 
-        }
-        string? sourcePath;
-        string destPath = Application.StartupPath + @"..\..\..\Assets\ProductImages\";
-        string? destFile;
-        Random rnd = new Random();
-        private void buttonLoadPhoto_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog choosePhoto = new OpenFileDialog();
-            choosePhoto.Filter = "Resim Dosyası |*.jpg; *.jpeg; *.png";
-            choosePhoto.Title = "Resim Seç";
-            if (choosePhoto.ShowDialog() == DialogResult.OK)
-            {
-                sourcePath = choosePhoto.FileName;
-                destFile = destPath + product.Id + "-" + product.Name + "-" + rnd.Next(999999).ToString() + Path.GetExtension(choosePhoto.FileName);
-                File.Copy(sourcePath, destFile);
-                pictureBoxProduct.ImageLocation = destFile;
-
-
-                SQLiteConnection con = new SQLiteConnection();
-                con.ConnectionString = @"Data Source =StokTakipSistemi.db";
-                con.Open();
-                SQLiteCommand cmd = new SQLiteCommand(con);
-                cmd.CommandText = "update Product set ImageURL = '" + destFile + "' where id = " + product.Id;
-                cmd.ExecuteNonQuery();
-                con.Close();
-
-            }
         }
     }
 }

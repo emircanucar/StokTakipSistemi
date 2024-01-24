@@ -61,7 +61,6 @@
             panel6 = new Panel();
             buttonChangePassword = new Button();
             pictureBoxUser = new PictureBox();
-            buttonLoadPhoto = new Button();
             panelTopBar.SuspendLayout();
             panel10.SuspendLayout();
             panelContent.SuspendLayout();
@@ -220,7 +219,6 @@
             panel.Controls.Add(panelForm);
             panel.Controls.Add(buttonChangePassword);
             panel.Controls.Add(pictureBoxUser);
-            panel.Controls.Add(buttonLoadPhoto);
             panel.Location = new Point(257, 3);
             panel.Name = "panel";
             panel.Size = new Size(540, 582);
@@ -531,24 +529,6 @@
             pictureBoxUser.TabIndex = 4;
             pictureBoxUser.TabStop = false;
             // 
-            // buttonLoadPhoto
-            // 
-            buttonLoadPhoto.Anchor = AnchorStyles.None;
-            buttonLoadPhoto.BackColor = Color.FromArgb(44, 46, 68);
-            buttonLoadPhoto.Cursor = Cursors.Hand;
-            buttonLoadPhoto.FlatAppearance.BorderSize = 0;
-            buttonLoadPhoto.FlatStyle = FlatStyle.Flat;
-            buttonLoadPhoto.Font = new Font("Yu Gothic UI Semibold", 8F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonLoadPhoto.ForeColor = Color.FromArgb(238, 244, 237);
-            buttonLoadPhoto.Location = new Point(188, 208);
-            buttonLoadPhoto.Margin = new Padding(0);
-            buttonLoadPhoto.Name = "buttonLoadPhoto";
-            buttonLoadPhoto.Size = new Size(150, 40);
-            buttonLoadPhoto.TabIndex = 6;
-            buttonLoadPhoto.Text = "Fotoğraf Yükle";
-            buttonLoadPhoto.UseVisualStyleBackColor = false;
-            buttonLoadPhoto.Click += buttonLoadPhoto_Click;
-            // 
             // ViewUserForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -598,7 +578,6 @@
         private Panel panel;
         private Button buttonChangePassword;
         private PictureBox pictureBoxUser;
-        private Button buttonLoadPhoto;
         private Panel panelForm;
         private TableLayoutPanel tableLayoutPanel3;
         private Panel panel11;

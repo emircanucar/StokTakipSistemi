@@ -31,12 +31,10 @@
             panelBottomBar = new Panel();
             buttonClear = new Button();
             buttonAdd = new Button();
-            pictureBoxUser = new PictureBox();
             tablePanelForm = new TableLayoutPanel();
             panelTextBoxUser = new Panel();
             textBoxUserName = new TextBox();
             panel1 = new Panel();
-            buttonLoadPhoto = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel3 = new Panel();
             textBoxName = new TextBox();
@@ -58,7 +56,6 @@
             textBoxPassword = new TextBox();
             panel8 = new Panel();
             panelBottomBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxUser).BeginInit();
             tablePanelForm.SuspendLayout();
             panelTextBoxUser.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -118,17 +115,6 @@
             buttonAdd.UseVisualStyleBackColor = false;
             buttonAdd.Click += buttonAdd_Click;
             // 
-            // pictureBoxUser
-            // 
-            pictureBoxUser.Anchor = AnchorStyles.None;
-            pictureBoxUser.Image = Properties.Resources.personprofile;
-            pictureBoxUser.Location = new Point(168, 16);
-            pictureBoxUser.Name = "pictureBoxUser";
-            pictureBoxUser.Size = new Size(205, 204);
-            pictureBoxUser.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxUser.TabIndex = 4;
-            pictureBoxUser.TabStop = false;
-            // 
             // tablePanelForm
             // 
             tablePanelForm.Anchor = AnchorStyles.None;
@@ -137,7 +123,7 @@
             tablePanelForm.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tablePanelForm.Controls.Add(panelTextBoxUser, 0, 0);
             tablePanelForm.Controls.Add(panel1, 0, 1);
-            tablePanelForm.Location = new Point(144, 301);
+            tablePanelForm.Location = new Point(145, 64);
             tablePanelForm.Name = "tablePanelForm";
             tablePanelForm.RowCount = 2;
             tablePanelForm.RowStyles.Add(new RowStyle());
@@ -180,24 +166,6 @@
             panel1.Size = new Size(248, 3);
             panel1.TabIndex = 0;
             // 
-            // buttonLoadPhoto
-            // 
-            buttonLoadPhoto.Anchor = AnchorStyles.None;
-            buttonLoadPhoto.BackColor = Color.FromArgb(44, 46, 68);
-            buttonLoadPhoto.Cursor = Cursors.Hand;
-            buttonLoadPhoto.FlatAppearance.BorderSize = 0;
-            buttonLoadPhoto.FlatStyle = FlatStyle.Flat;
-            buttonLoadPhoto.Font = new Font("Yu Gothic UI Semibold", 8F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonLoadPhoto.ForeColor = Color.FromArgb(238, 244, 237);
-            buttonLoadPhoto.Location = new Point(192, 228);
-            buttonLoadPhoto.Margin = new Padding(0);
-            buttonLoadPhoto.Name = "buttonLoadPhoto";
-            buttonLoadPhoto.Size = new Size(150, 40);
-            buttonLoadPhoto.TabIndex = 6;
-            buttonLoadPhoto.Text = "Fotoğraf Yükle";
-            buttonLoadPhoto.UseVisualStyleBackColor = false;
-            buttonLoadPhoto.Click += buttonLoadPhoto_Click;
-            // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.Anchor = AnchorStyles.None;
@@ -208,7 +176,7 @@
             tableLayoutPanel1.Controls.Add(panel4, 0, 3);
             tableLayoutPanel1.Controls.Add(panel5, 0, 1);
             tableLayoutPanel1.Controls.Add(panel6, 0, 4);
-            tableLayoutPanel1.Location = new Point(6, 424);
+            tableLayoutPanel1.Location = new Point(7, 187);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 5;
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
@@ -299,7 +267,7 @@
             tableLayoutPanel3.Controls.Add(panel12, 0, 3);
             tableLayoutPanel3.Controls.Add(panel13, 0, 1);
             tableLayoutPanel3.Controls.Add(panel14, 0, 4);
-            tableLayoutPanel3.Location = new Point(276, 424);
+            tableLayoutPanel3.Location = new Point(277, 187);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 5;
             tableLayoutPanel3.RowStyles.Add(new RowStyle());
@@ -397,13 +365,11 @@
             panel2.Anchor = AnchorStyles.Top;
             panel2.Controls.Add(tableLayoutPanel2);
             panel2.Controls.Add(tablePanelForm);
-            panel2.Controls.Add(pictureBoxUser);
             panel2.Controls.Add(tableLayoutPanel3);
             panel2.Controls.Add(tableLayoutPanel1);
-            panel2.Controls.Add(buttonLoadPhoto);
-            panel2.Location = new Point(223, 0);
+            panel2.Location = new Point(217, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(531, 629);
+            panel2.Size = new Size(532, 471);
             panel2.TabIndex = 10;
             // 
             // tableLayoutPanel2
@@ -414,7 +380,7 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel2.Controls.Add(panel7, 0, 0);
             tableLayoutPanel2.Controls.Add(panel8, 0, 1);
-            tableLayoutPanel2.Location = new Point(144, 365);
+            tableLayoutPanel2.Location = new Point(145, 128);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 2;
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
@@ -470,7 +436,6 @@
             StartPosition = FormStartPosition.CenterParent;
             Text = " ";
             panelBottomBar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBoxUser).EndInit();
             tablePanelForm.ResumeLayout(false);
             panelTextBoxUser.ResumeLayout(false);
             panelTextBoxUser.PerformLayout();
@@ -495,12 +460,10 @@
         private Panel panelBottomBar;
         private Button buttonClear;
         private Button buttonAdd;
-        private PictureBox pictureBoxUser;
         private TableLayoutPanel tablePanelForm;
         private Panel panelTextBoxUser;
         private TextBox textBoxUserName;
         private Panel panel1;
-        private Button buttonLoadPhoto;
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel3;
         private TextBox textBoxName;

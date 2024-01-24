@@ -22,13 +22,12 @@ namespace StokTakipSistemi.Forms.Childs
             SQLiteConnection con = new SQLiteConnection();
             con.ConnectionString = @"Data Source =StokTakipSistemi.db";
             SQLiteCommand cmd = new SQLiteCommand(con);
-            cmd.CommandText = "insert into Product (Category, Name, Brand, Model, Origin, ImageURL, Description) VALUES (@category, @name, @brand, @model, @origin, @imageURL, @description)";
+            cmd.CommandText = "insert into Product (Category, Name, Brand, Model, Origin, Description) VALUES (@category, @name, @brand, @model, @origin, @description)";
             cmd.Parameters.AddWithValue("@category", textBoxProductCategory.Text ?? "");
             cmd.Parameters.AddWithValue("@name", textBoxProductName.Text ?? "");
             cmd.Parameters.AddWithValue("@brand", textBoxProductBrand.Text ?? "");
             cmd.Parameters.AddWithValue("@model", textBoxProductModel.Text ?? "");
             cmd.Parameters.AddWithValue("@origin", textBoxProductOrigin.Text ?? "");
-            cmd.Parameters.AddWithValue("@imageURL", pictureBoxProduct.ImageLocation);
             cmd.Parameters.AddWithValue("@description", textBoxProductDesc.Text ?? "");
 
 
@@ -87,7 +86,7 @@ namespace StokTakipSistemi.Forms.Childs
             finally
             {
                 con.Close();
-               
+
             }
         }
 
@@ -104,31 +103,6 @@ namespace StokTakipSistemi.Forms.Childs
             textBoxProductMadeYear.Text = "";
         }
 
-        string? sourcePath;
-        string destPath = Application.StartupPath + @"..\..\..\Assets\ProductImages\";
-        string? destFile;
-        Random rnd = new Random();
-        private void buttonLoadPhoto_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                OpenFileDialog choosePhoto = new OpenFileDialog();
-                choosePhoto.Filter = "Resim Dosyası |*.jpg; *.jpeg; *.png";
-                choosePhoto.Title = "Resim Seç";
-                if (choosePhoto.ShowDialog() == DialogResult.OK)
-                {
-                    sourcePath = choosePhoto.FileName;
-                    destFile = destPath + "new" + "-" + textBoxProductName.Text + "-" + rnd.Next(999999).ToString() + Path.GetExtension(choosePhoto.FileName);
-                    File.Copy(sourcePath, destFile);
-                    pictureBoxProduct.ImageLocation = destFile;
 
-                }
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Bir hata oluştu:" + ex.Message, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
     }
 }

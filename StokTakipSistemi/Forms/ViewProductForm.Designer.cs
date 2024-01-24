@@ -79,7 +79,6 @@
             panel5 = new Panel();
             panel6 = new Panel();
             pictureBoxProduct = new PictureBox();
-            buttonLoadPhoto = new Button();
             panelTopBar.SuspendLayout();
             panel10.SuspendLayout();
             panelContent.SuspendLayout();
@@ -171,7 +170,7 @@
             panel10.Controls.Add(buttonSave);
             panel10.Controls.Add(buttonEdit);
             panel10.Dock = DockStyle.Bottom;
-            panel10.Location = new Point(0, 612);
+            panel10.Location = new Point(0, 781);
             panel10.Name = "panel10";
             panel10.Size = new Size(1006, 50);
             panel10.TabIndex = 10;
@@ -237,7 +236,7 @@
             panelContent.Dock = DockStyle.Fill;
             panelContent.Location = new Point(0, 40);
             panelContent.Name = "panelContent";
-            panelContent.Size = new Size(1006, 622);
+            panelContent.Size = new Size(1006, 791);
             panelContent.TabIndex = 9;
             // 
             // panel
@@ -245,8 +244,7 @@
             panel.Anchor = AnchorStyles.Top;
             panel.Controls.Add(panelForm);
             panel.Controls.Add(pictureBoxProduct);
-            panel.Controls.Add(buttonLoadPhoto);
-            panel.Location = new Point(207, 3);
+            panel.Location = new Point(237, 3);
             panel.Name = "panel";
             panel.Size = new Size(514, 926);
             panel.TabIndex = 15;
@@ -791,30 +789,12 @@
             pictureBoxProduct.TabIndex = 4;
             pictureBoxProduct.TabStop = false;
             // 
-            // buttonLoadPhoto
-            // 
-            buttonLoadPhoto.Anchor = AnchorStyles.None;
-            buttonLoadPhoto.BackColor = Color.FromArgb(44, 46, 68);
-            buttonLoadPhoto.Cursor = Cursors.Hand;
-            buttonLoadPhoto.FlatAppearance.BorderSize = 0;
-            buttonLoadPhoto.FlatStyle = FlatStyle.Flat;
-            buttonLoadPhoto.Font = new Font("Yu Gothic UI Semibold", 8F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonLoadPhoto.ForeColor = Color.FromArgb(238, 244, 237);
-            buttonLoadPhoto.Location = new Point(180, 246);
-            buttonLoadPhoto.Margin = new Padding(0);
-            buttonLoadPhoto.Name = "buttonLoadPhoto";
-            buttonLoadPhoto.Size = new Size(150, 40);
-            buttonLoadPhoto.TabIndex = 6;
-            buttonLoadPhoto.Text = "Fotoğraf Yükle";
-            buttonLoadPhoto.UseVisualStyleBackColor = false;
-            buttonLoadPhoto.Click += buttonLoadPhoto_Click;
-            // 
             // ViewProductForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(1006, 662);
+            ClientSize = new Size(1006, 831);
             ControlBox = false;
             Controls.Add(panel10);
             Controls.Add(panelContent);
@@ -881,7 +861,6 @@
         private Panel panel18;
         private TextBox textBoxProductDesc;
         private Panel panel20;
-        private Button buttonLoadPhoto;
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel3;
         private TextBox textBoxProductBrand;

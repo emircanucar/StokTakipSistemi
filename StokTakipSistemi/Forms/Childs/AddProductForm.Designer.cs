@@ -34,7 +34,6 @@
             panelContent = new Panel();
             panel27 = new Panel();
             label3 = new Label();
-            pictureBoxProduct = new PictureBox();
             tableLayoutPanel7 = new TableLayoutPanel();
             panel26 = new Panel();
             comboBoxProductUnit = new ComboBox();
@@ -43,7 +42,6 @@
             panel18 = new Panel();
             textBoxProductDesc = new TextBox();
             panel20 = new Panel();
-            buttonLoadPhoto = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel3 = new Panel();
             textBoxProductBrand = new TextBox();
@@ -77,7 +75,6 @@
             panel10.SuspendLayout();
             panelContent.SuspendLayout();
             panel27.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxProduct).BeginInit();
             tableLayoutPanel7.SuspendLayout();
             panel26.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
@@ -156,17 +153,15 @@
             // 
             panel27.Anchor = AnchorStyles.Top;
             panel27.Controls.Add(label3);
-            panel27.Controls.Add(pictureBoxProduct);
             panel27.Controls.Add(tableLayoutPanel7);
             panel27.Controls.Add(tableLayoutPanel5);
-            panel27.Controls.Add(buttonLoadPhoto);
             panel27.Controls.Add(tableLayoutPanel1);
             panel27.Controls.Add(tableLayoutPanel2);
             panel27.Controls.Add(tableLayoutPanel3);
             panel27.Controls.Add(tableLayoutPanel4);
-            panel27.Location = new Point(189, 3);
+            panel27.Location = new Point(191, 3);
             panel27.Name = "panel27";
-            panel27.Size = new Size(514, 1099);
+            panel27.Size = new Size(514, 736);
             panel27.TabIndex = 14;
             // 
             // label3
@@ -175,23 +170,12 @@
             label3.AutoSize = true;
             label3.FlatStyle = FlatStyle.Flat;
             label3.Font = new Font("Yu Gothic UI Semilight", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(265, 490);
+            label3.Location = new Point(265, 286);
             label3.Margin = new Padding(0);
             label3.Name = "label3";
             label3.Size = new Size(73, 23);
             label3.TabIndex = 14;
             label3.Text = "Miktar *:";
-            // 
-            // pictureBoxProduct
-            // 
-            pictureBoxProduct.Anchor = AnchorStyles.None;
-            pictureBoxProduct.Image = Properties.Resources.collection_fill;
-            pictureBoxProduct.Location = new Point(140, 3);
-            pictureBoxProduct.Name = "pictureBoxProduct";
-            pictureBoxProduct.Size = new Size(236, 226);
-            pictureBoxProduct.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxProduct.TabIndex = 4;
-            pictureBoxProduct.TabStop = false;
             // 
             // tableLayoutPanel7
             // 
@@ -201,7 +185,7 @@
             tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel7.Controls.Add(panel26, 0, 0);
             tableLayoutPanel7.Controls.Add(panel28, 0, 1);
-            tableLayoutPanel7.Location = new Point(-1, 435);
+            tableLayoutPanel7.Location = new Point(-1, 236);
             tableLayoutPanel7.Name = "tableLayoutPanel7";
             tableLayoutPanel7.RowCount = 3;
             tableLayoutPanel7.RowStyles.Add(new RowStyle());
@@ -254,7 +238,7 @@
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel5.Controls.Add(panel18, 0, 0);
             tableLayoutPanel5.Controls.Add(panel20, 0, 1);
-            tableLayoutPanel5.Location = new Point(-1, 696);
+            tableLayoutPanel5.Location = new Point(-1, 497);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 3;
             tableLayoutPanel5.RowStyles.Add(new RowStyle());
@@ -299,24 +283,6 @@
             panel20.Size = new Size(515, 3);
             panel20.TabIndex = 0;
             // 
-            // buttonLoadPhoto
-            // 
-            buttonLoadPhoto.Anchor = AnchorStyles.None;
-            buttonLoadPhoto.BackColor = Color.FromArgb(44, 46, 68);
-            buttonLoadPhoto.Cursor = Cursors.Hand;
-            buttonLoadPhoto.FlatAppearance.BorderSize = 0;
-            buttonLoadPhoto.FlatStyle = FlatStyle.Flat;
-            buttonLoadPhoto.Font = new Font("Yu Gothic UI Semibold", 8F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonLoadPhoto.ForeColor = Color.FromArgb(238, 244, 237);
-            buttonLoadPhoto.Location = new Point(178, 242);
-            buttonLoadPhoto.Margin = new Padding(0);
-            buttonLoadPhoto.Name = "buttonLoadPhoto";
-            buttonLoadPhoto.Size = new Size(150, 40);
-            buttonLoadPhoto.TabIndex = 6;
-            buttonLoadPhoto.Text = "Fotoğraf Yükle";
-            buttonLoadPhoto.UseVisualStyleBackColor = false;
-            buttonLoadPhoto.Click += buttonLoadPhoto_Click;
-            // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.Anchor = AnchorStyles.None;
@@ -327,7 +293,7 @@
             tableLayoutPanel1.Controls.Add(panel4, 0, 3);
             tableLayoutPanel1.Controls.Add(panel5, 0, 1);
             tableLayoutPanel1.Controls.Add(panel6, 0, 4);
-            tableLayoutPanel1.Location = new Point(265, 304);
+            tableLayoutPanel1.Location = new Point(265, 105);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 5;
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
@@ -419,7 +385,7 @@
             tableLayoutPanel2.Controls.Add(panel7, 0, 1);
             tableLayoutPanel2.Controls.Add(panel8, 0, 4);
             tableLayoutPanel2.Controls.Add(label1, 0, 2);
-            tableLayoutPanel2.Location = new Point(-1, 511);
+            tableLayoutPanel2.Location = new Point(-1, 312);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 5;
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
@@ -523,7 +489,7 @@
             tableLayoutPanel3.Controls.Add(panel12, 0, 3);
             tableLayoutPanel3.Controls.Add(panel13, 0, 1);
             tableLayoutPanel3.Controls.Add(panel14, 0, 4);
-            tableLayoutPanel3.Location = new Point(-1, 304);
+            tableLayoutPanel3.Location = new Point(-1, 105);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 5;
             tableLayoutPanel3.RowStyles.Add(new RowStyle());
@@ -615,7 +581,7 @@
             tableLayoutPanel4.Controls.Add(panel15, 0, 3);
             tableLayoutPanel4.Controls.Add(panel16, 0, 1);
             tableLayoutPanel4.Controls.Add(panel17, 0, 4);
-            tableLayoutPanel4.Location = new Point(265, 511);
+            tableLayoutPanel4.Location = new Point(265, 312);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 5;
             tableLayoutPanel4.RowStyles.Add(new RowStyle());
@@ -727,7 +693,6 @@
             panelContent.ResumeLayout(false);
             panel27.ResumeLayout(false);
             panel27.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxProduct).EndInit();
             tableLayoutPanel7.ResumeLayout(false);
             panel26.ResumeLayout(false);
             tableLayoutPanel5.ResumeLayout(false);
@@ -791,8 +756,6 @@
         private TextBox textBoxProductCategory;
         private Panel panel5;
         private Panel panel6;
-        private PictureBox pictureBoxProduct;
-        private Button buttonLoadPhoto;
         private TableLayoutPanel tableLayoutPanel7;
         private Panel panel26;
         private ComboBox comboBoxProductUnit;

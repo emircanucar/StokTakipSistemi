@@ -38,14 +38,12 @@ namespace StokTakipSistemi.Forms
                     user.name = dr["Name"].ToString() ?? "";
                     user.profession = dr["Profession"].ToString() ?? "";
                     user.eMail = dr["Email"].ToString() ?? "";
-                    user.imgUrl = dr["ImageURL"].ToString() ?? "";
                     user.role = Convert.ToByte(dr["role"]);
                 }
                 textBoxUserName.Text = user.userName;
                 textBoxName.Text = user.name;
                 textBoxProf.Text = user.profession;
                 textBoxMail.Text = user.eMail;
-                pictureBoxUser.ImageLocation = user.imgUrl;
 
 
                 if (user.role == 1)
@@ -119,7 +117,7 @@ namespace StokTakipSistemi.Forms
 
 
 
-             
+
             SQLiteConnection con = new SQLiteConnection();
             con.ConnectionString = @"Data Source =StokTakipSistemi.db";
             con.Open();
@@ -140,33 +138,6 @@ namespace StokTakipSistemi.Forms
 
 
 
-        }
-        string? sourcePath;
-        string destPath = Application.StartupPath + @"..\..\..\Assets\UserImages\";
-        string? destFile;
-        Random rnd = new Random();
-        private void buttonLoadPhoto_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog choosePhoto = new OpenFileDialog();
-            choosePhoto.Filter = "Resim Dosyası |*.jpg; *.jpeg; *.png";
-            choosePhoto.Title = "Resim Seç";
-            if (choosePhoto.ShowDialog() == DialogResult.OK)
-            {
-                sourcePath = choosePhoto.FileName;
-                destFile = destPath + user.id + "-" + user.name + "-" + rnd.Next(999999).ToString() + Path.GetExtension(choosePhoto.FileName);
-                File.Copy(sourcePath, destFile);
-                pictureBoxUser.ImageLocation = destFile;
-
-
-                SQLiteConnection con = new SQLiteConnection();
-                con.ConnectionString = @"Data Source =StokTakipSistemi.db";
-                con.Open();
-                SQLiteCommand cmd = new SQLiteCommand(con);
-                cmd.CommandText = "update users set ImageURL = '" + destFile + "' where id = " + user.id;
-                cmd.ExecuteNonQuery();
-                con.Close();
-
-            }
         }
 
         private void buttonChangePassword_Click(object sender, EventArgs e)

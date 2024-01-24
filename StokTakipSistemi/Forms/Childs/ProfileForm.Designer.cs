@@ -35,7 +35,6 @@
             panel2 = new Panel();
             buttonChangePassword = new Button();
             pictureBoxUser = new PictureBox();
-            buttonLoadPhoto = new Button();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel3 = new Panel();
             textBoxName = new TextBox();
@@ -143,7 +142,6 @@
             panel2.Anchor = AnchorStyles.Top;
             panel2.Controls.Add(buttonChangePassword);
             panel2.Controls.Add(pictureBoxUser);
-            panel2.Controls.Add(buttonLoadPhoto);
             panel2.Location = new Point(222, 3);
             panel2.Name = "panel2";
             panel2.Size = new Size(531, 611);
@@ -179,24 +177,6 @@
             pictureBoxUser.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxUser.TabIndex = 4;
             pictureBoxUser.TabStop = false;
-            // 
-            // buttonLoadPhoto
-            // 
-            buttonLoadPhoto.Anchor = AnchorStyles.None;
-            buttonLoadPhoto.BackColor = Color.FromArgb(44, 46, 68);
-            buttonLoadPhoto.Cursor = Cursors.Hand;
-            buttonLoadPhoto.FlatAppearance.BorderSize = 0;
-            buttonLoadPhoto.FlatStyle = FlatStyle.Flat;
-            buttonLoadPhoto.Font = new Font("Yu Gothic UI Semibold", 8F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonLoadPhoto.ForeColor = Color.FromArgb(238, 244, 237);
-            buttonLoadPhoto.Location = new Point(182, 235);
-            buttonLoadPhoto.Margin = new Padding(0);
-            buttonLoadPhoto.Name = "buttonLoadPhoto";
-            buttonLoadPhoto.Size = new Size(150, 40);
-            buttonLoadPhoto.TabIndex = 6;
-            buttonLoadPhoto.Text = "Fotoğraf Yükle";
-            buttonLoadPhoto.UseVisualStyleBackColor = false;
-            buttonLoadPhoto.Click += buttonLoadPhoto_Click;
             // 
             // tableLayoutPanel2
             // 
@@ -529,7 +509,6 @@
         private Panel panel2;
         private Button buttonChangePassword;
         private PictureBox pictureBoxUser;
-        private Button buttonLoadPhoto;
         private TableLayoutPanel tableLayoutPanel2;
         private Panel panel3;
         private TextBox textBoxName;
