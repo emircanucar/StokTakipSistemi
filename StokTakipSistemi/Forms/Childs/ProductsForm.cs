@@ -108,7 +108,7 @@ namespace StokTakipSistemi.Forms.Childs
             try
             {
                 DialogResult deleteUser = new DialogResult();
-                deleteUser = MessageBox.Show("Kullanıcıyı silmek istediğinizden emin misiniz?", "Kulanıcıyı Sil", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                deleteUser = MessageBox.Show("Ürünü silmek istediğinizden emin misiniz?", "Ürün Sil", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteUser == DialogResult.Yes)
                 {
                     if (dataGridView1.SelectedRows.Count >= 1)
