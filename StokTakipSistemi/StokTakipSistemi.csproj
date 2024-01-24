@@ -19,7 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="logo.ico" />
+    <Content Include="logo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="StokTakipSistemi.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
